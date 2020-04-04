@@ -1,0 +1,17 @@
+<p id="notice"><%= notice %></p>
+<p>
+  <strong>Store:</strong>
+  <%= @store_list.title %>
+</p>
+<p>
+  <strong>Description:</strong>
+  <%= @store_list.description %>
+</p>
+<div id="employees_wrapper">
+ <%= render @store_list.todo_items %>
+ <div id="form">
+  <%= render "employees/form" %>
+ </div>
+</div>
+<%= link_to 'Edit', edit_store_list_path(@todo_list) %> |
+<%= link_to 'Back', store_lists_path %>

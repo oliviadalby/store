@@ -1,0 +1,4 @@
+<%= form_for([@store_list, @store_list.employees.build]) do |f| %>
+ <%= f.text_field :content, placeholder: "New Store" %>
+ <%= f.submit %>
+<% end %>

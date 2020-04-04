@@ -1,0 +1,32 @@
+<%= form_with(model: store_list, local: true) do |form| %>
+  <% if store_list.errors.any? %>
+    <div id="error_explanation">
+      <h2><%= pluralize(store_list.errors.count, "error") %> prohibited this store_list from being saved:</h2>
+
+      <ul>
+        <% store_list.errors.full_messages.each do |message| %>
+          <li><%= message %></li>
+        <% end %>
+      </ul>
+    </div>
+  <% end %>
+
+  <div class="field">
+    <%= form.label :name %>
+    <%= form.text_field :name %>
+  </div>
+
+  <div class="field">
+    <%= form.label :open %>
+    <%= form.check_box :open %>
+  </div>
+
+  <div class="field">
+    <%= form.label :employees %>
+    <%= form.number_field :employees %>
+  </div>
+
+  <div class="actions">
+    <%= form.submit %>
+  </div>
+<% end %>
