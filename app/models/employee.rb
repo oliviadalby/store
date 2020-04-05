@@ -1,2 +1,6 @@
 class Employee < ApplicationRecord
-end
+  belongs_to :store_list
+ def completed?
+    !completed_at.blank?
+   end
+ end
